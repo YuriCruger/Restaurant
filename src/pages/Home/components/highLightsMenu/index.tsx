@@ -1,8 +1,8 @@
 import * as S from './styles'
-import Salmon from '../../../public/assets/homepage/salmon-mobile@2x.jpg'
-import Beef from '../../../public/assets/homepage/beef-mobile@2x.jpg'
-import Chocolate from '../../../public/assets/homepage/chocolate-mobile@2x.jpg'
-import lineIcon from '../../../public/images/line48.svg'
+import Salmon from 'homepage/salmon-mobile@2x.jpg'
+import Beef from 'homepage/beef-mobile@2x.jpg'
+import Chocolate from 'homepage/chocolate-mobile@2x.jpg'
+import lineIcon from 'images/line48.svg'
 
 export default function HighLightsMenu() {
     return (

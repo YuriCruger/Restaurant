@@ -14,6 +14,12 @@ align-items: center;
 }
 `
 
+export const ContainerLogo = styled.div`
+@media screen and (min-width: 1024px) {
+  margin-bottom: 60px;
+}
+`
+
 export const Logo = styled.button`
 color: #ffffff;
 background-color: transparent;
@@ -24,7 +30,6 @@ text-decoration: none;
 
 @media screen and (min-width: 1024px) {
   font-size: 60px;
-  margin-bottom: 60px;
 }
 `;
 

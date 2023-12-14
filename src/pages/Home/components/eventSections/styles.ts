@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Section = styled.section`
 padding: 60px 24px 60px 24px;
 display: flex;
@@ -26,37 +25,11 @@ padding: 60px 88px 60px 88px;
 
 `;
 
-export const ImageMobile = styled.img`
-width: 100%;
-max-width: 400px;
-margin-bottom: 40px;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-@media screen and (min-width: 768px) {
-  display: none;
-}
-`
-
-export const ImageTablet = styled.img`
-width: 100%;
-max-width: 575px;
-margin-bottom: 40px;
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-@media screen and (max-width: 767px) {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  display: none;
-}
-`
-
 export const ImageDesktop = styled.img`
 width: 100%;
 max-width: 450px;
 margin-bottom: 40px;
 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-@media screen and (max-width: 1023px) {
-  display: none;
-}
 
 @media screen and (min-width: 1536px) {
   max-width: 500px;
@@ -94,16 +67,21 @@ max-width: 400px;
 }
 `;
 
-export const ButtonEvent = styled.button`
+export const ButtonEvent = styled.button<{selected?: boolean}>`
+color: ${props => props.selected ? 'hsl(27, 22%, 51%)' : '#5D5A5E'};
 border: none;
-color: var(--color-button-text);
 font-size: 25px;
 background-color: #ffffff;
 cursor: pointer;
 padding: 7px 15px;
+transition: .3s;
+
+&:hover {
+  color: var(--color-beaver);
+}
 
 &:focus{
-  border: 4px solid var(--color-ebonyclay)
+  border: 4px solid var(--color-ebonyclay);
 }
 `;
 
@@ -152,17 +130,17 @@ z-index: 3;
 position: relative;
 `
 
-export const BackgroundImg = styled.img`
+export const PatternCurve = styled.img`
 position: absolute;
 left: 0;
 top: 0;
-max-width: 50%;
+max-width: 60%;
 z-index: 0;
 @media screen and (max-width: 768px) {
   display:none
 }
 @media screen and (min-width: 1280px) {
-  max-width: 30%;
+  max-width: 35%;
 }
 `
 

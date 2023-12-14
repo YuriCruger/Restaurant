@@ -1,7 +1,7 @@
-import ReserveHeader from '../components/booking/reserveHeader'
-import Form, { FormProps } from '../components/booking/formReserve'
+import ReserveHeader from './components/reserveHeader'
+import Form, { FormProps } from './components/formReserve'
 import { useState } from 'react';
-import Modal from '../components/booking/modal';
+import Modal from './components/modal';
 
 export default function Booking() {
   const [modalOpen, setModalOpen] = useState(false);

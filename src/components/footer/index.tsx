@@ -1,9 +1,15 @@
 import { Github } from 'lucide-react';
 import * as S from './styles'
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
-    
+
+    const navigate = useNavigate();
+
+    function handleNavigate() {
+        navigate("/");
+    }
+
     function openGit() {
         window.open('https://github.com/YuriCruger', '_blank')
     }
@@ -12,9 +18,9 @@ export default function Footer() {
         <S.Footer>
 
             <S.Container>
-                <Link to='/' style={{ textDecoration: 'none' }}>
-                    <S.Logo>dine</S.Logo>
-                </Link>
+                <S.ContainerLogo>
+                        <S.Logo onClick={handleNavigate}>dine</S.Logo>
+                </S.ContainerLogo>
                 <S.Content>
                     <S.SubContent>
                         <S.InfoText>MARTHWAITE, SEDBERGH</S.InfoText>
@@ -32,7 +38,7 @@ export default function Footer() {
 
             <S.Credits>
                 <p>Code challenge by Frontend Mentor • Made by Yuri Cruger</p>
-                <Github onClick={openGit} size={40} style={{cursor: 'pointer'}}/>
+                <Github onClick={openGit} size={40} style={{ cursor: 'pointer' }} />
             </S.Credits>
         </S.Footer>
     )

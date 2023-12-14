@@ -1,6 +1,6 @@
 import * as S from './styles'
-import PatternLines from '../../../../public/images/pattern-lines.svg'
-import BgImage from '../../../../public/images/pattern-curve-top-right.svg'
+import PatternLines from 'images/pattern-lines.svg'
+import BgImage from 'images/pattern-curve-top-right.svg'
 import { useForm } from 'react-hook-form'
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";

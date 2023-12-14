@@ -43,7 +43,7 @@ max-width: 600px;
 
 export const HeaderContent = styled.div`
 width: 100%;
-padding:  40px 24px  40px 0px;
+padding:  40px 24px  40px 24px;
 text-align: center;
 font-weight: bold;
 color: white;
@@ -59,6 +59,12 @@ gap: 20px;
 }
 `
 
+export const ContainerLogo = styled.div`
+@media screen and (min-width: 1024px) {
+  margin-bottom: 60px;
+}
+`
+
 export const Logo = styled.button`
 color: #ffffff;
 background-color: transparent;
@@ -66,10 +72,8 @@ border: none;
 font-size: 45px;
 cursor: pointer;
 text-decoration: none;
-
 @media screen and (min-width: 1024px) {
   font-size: 60px;
-  margin-bottom: 60px;
 }
 `
 
@@ -97,6 +101,13 @@ max-width: 400px;
 }
 `
 
+export const ContainButton = styled.div`
+margin-bottom: 110px;
+@media screen and (min-width: 1024px) {
+  margin-top: 30px;
+}
+`
+
 export const Button = styled.button`
 width: 250px;
 height: 70px;
@@ -106,7 +117,6 @@ color: white;
 font-size: 18px;
 letter-spacing: 2px;
 cursor: pointer;
-margin-bottom: 110px;
 transition: .3s;
 
 &:hover {
@@ -114,10 +124,6 @@ transition: .3s;
     border: 1px solid #000000;
     color: #000000
   }
-
-  @media screen and (min-width: 1024px) {
-  margin-top: 30px;
-}
 `;
 
 export const Br = styled.br`

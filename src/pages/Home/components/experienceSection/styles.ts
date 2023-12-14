@@ -10,15 +10,11 @@ text-align: center;
 position: relative;
 
 @media screen and (min-width: 1024px) {
-    padding: 0 88px;
+  padding: 0;
 }
 
 @media screen and (min-width: 1280px) {
   align-items: center;
-}
-
-@media screen and (min-width: 1536px) {
-    padding: 0 250px;
 }
 `
 
@@ -30,49 +26,42 @@ align-items: center;
 z-index: 1;
 
 @media screen and (min-width: 1024px) {
+  position: absolute;
+  left: 88px;
   flex-direction: row;
   text-align: start;
   gap: 60px;
-  width: 100%;
+  margin-right: 88px;
   &.inverse {
+    margin-right: 0;
+    right: 88px;
+    bottom: 0;
     flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  left: 250px;
+  &.inverse {
+    right: 250px;
   }
 }
 `
 
-export const ImageMobile = styled.img`
-  width: 100%;
-  max-width: 400px;
-  margin-top: -75px;
-  @media screen and (min-width: 768px) {
-    display:none
-  }
-`
-
-export const ImageTablet = styled.img`
-  width: 100%;
-  max-width: 570px;
-  margin-top: -75px;
-  @media screen and (max-width: 767px) {
-    display:none
-  }
-  @media screen and (min-width: 1024px) {
-    display:none
-  }
-`
-
-export const ImageDesktop = styled.img`
+export const Image = styled.img`
   width: 100%;
   max-width: 450px;
   margin-top: -75px;
 
-  @media screen and (max-width: 1023px) {
-    display:none;
-    margin-right: auto;
-  }
-  
   @media screen and (min-width: 1280px) {
-    max-width: 550px;
+    max-width: 500px;
+  }
+
+  &.locally{
+    margin-top: 0px;
+    @media screen and (min-width: 1024px) {
+      margin-bottom: -75px;
+    }
   }
 `
 
@@ -122,22 +111,32 @@ max-width: 500px;
   }
 `
 
-export const BackgroundImg = styled.img`
-position: absolute;
-left: 0;
-top: 200px;
-max-width: 75%;
-z-index: 0;
+export const PatternCurve = styled.img`
+margin-top: 100px;
+margin-right: auto;
+width: 95%;
 
-&.backgroundImg-2 {
-  right: 0;
-  left: auto;
-  top: auto;
-  bottom: 50px;
-  transform: scaleX(-1);
+@media screen and (max-width: 1024px) {
+  display: none;
 }
 
-@media screen and (max-width: 768px) {
-  display: none;
+@media screen and (min-width: 1280px) {
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1400px) {
+  width: 85%;
+}
+
+@media screen and (min-width: 1700px) {
+  width: 75%;
+}
+
+&.patternCurve-2 {
+  margin: 220px 0 50px auto;
+  transform: scaleX(-1);
+  @media screen and (max-width: 1280px) {
+  margin-bottom: 100px;
+}
 }
 `
