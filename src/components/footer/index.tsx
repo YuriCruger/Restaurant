@@ -7,6 +7,10 @@ export default function Footer() {
     const navigate = useNavigate();
 
     function handleNavigate() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
         navigate("/");
     }
 
@@ -19,7 +23,7 @@ export default function Footer() {
 
             <S.Container>
                 <S.ContainerLogo>
-                        <S.Logo onClick={handleNavigate}>dine</S.Logo>
+                    <S.Logo onClick={handleNavigate}>dine</S.Logo>
                 </S.ContainerLogo>
                 <S.Content>
                     <S.SubContent>

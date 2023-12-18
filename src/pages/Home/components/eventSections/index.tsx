@@ -26,6 +26,13 @@ export default function index() {
     const [eventContent, setEventContent] = useState(eventContentInitial)
     const [selectedButton, setSelectedButton] = useState<string>('Family Gathering');
 
+    function toTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
+
     useEffect(() => {
         switch (eventContent.title) {
             case 'Family Gathering':
@@ -72,15 +79,15 @@ export default function index() {
                 <S.ContainerButtons>
                     {array.map((item) => (
                         <S.ButtonEvent
-                        key={item.title}
-                        onClick={() => {
-                            setEventContent(item);
-                            setSelectedButton(item.title);
-                        }}
-                        selected={selectedButton === item.title}
-                    >
-                        {item.title}
-                    </S.ButtonEvent>
+                            key={item.title}
+                            onClick={() => {
+                                setEventContent(item);
+                                setSelectedButton(item.title);
+                            }}
+                            selected={selectedButton === item.title}
+                        >
+                            {item.title}
+                        </S.ButtonEvent>
                     ))}
                 </S.ContainerButtons>
 
@@ -88,7 +95,7 @@ export default function index() {
                     <S.SubTitle>{eventContent.title}</S.SubTitle>
                     <S.Paragraph>{eventContent.paragraph}</S.Paragraph>
                     <Link to='/booking'>
-                        <S.Button>BOOK A TABLE</S.Button>
+                        <S.Button onClick={toTop}>BOOK A TABLE</S.Button>
                     </Link>
                 </div>
             </S.Container>

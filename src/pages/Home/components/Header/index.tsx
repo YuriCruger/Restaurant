@@ -6,6 +6,12 @@ import * as S from './styles';
 
 
 export default function Header() {
+  function toTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
 
   return (
     <S.Header >
@@ -24,7 +30,7 @@ export default function Header() {
 
         <S.ContainButton>
           <Link to='/booking'>
-            <S.Button>BOOK A TABLE</S.Button>
+            <S.Button onClick={toTop}>BOOK A TABLE</S.Button>
           </Link>
         </S.ContainButton>
 
