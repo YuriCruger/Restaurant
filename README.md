@@ -1,4 +1,4 @@
 # React + TypeScript + Vite
 
 Dine Website Challenge
-[Website](https://dine-restaurant-web.vercel.app/) 
+[Website](https://restaurant-web-vercel.vercel.app/) 
